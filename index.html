@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IEOR Golden Jubilee · IIT Bombay · 1976–2026</title>
+<meta name="description" content="IEOR at IIT Bombay marks fifty years. Join the Golden Reveal on 3 September 2026 and save 28–29 November for the Grand Alumni Meet.">
+<meta property="og:title" content="IEOR Golden Jubilee · IIT Bombay · 1976–2026">
+<meta property="og:description" content="The Golden Reveal arrives 3 September. The Grand Alumni Meet follows 28–29 November 2026 at IIT Bombay.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gj.theharshitsingh.com/">
+<meta property="og:site_name" content="IEOR Golden Jubilee">
+<meta property="og:image" content="https://gj.theharshitsingh.com/assets/golden-jubilee-logo.png">
+<meta property="og:image:alt" content="IEOR IIT Bombay Golden Jubilee logo, 1976 to 2026">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="IEOR Golden Jubilee · IIT Bombay · 1976–2026">
+<meta name="twitter:description" content="The Golden Reveal arrives 3 September. The Grand Alumni Meet follows 28–29 November 2026 at IIT Bombay.">
+<meta name="twitter:image" content="https://gj.theharshitsingh.com/assets/golden-jubilee-logo.png">
+<link rel="canonical" href="https://gj.theharshitsingh.com/">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#faf6ec">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%2314140f'/><text x='50' y='67' text-anchor='middle' font-family='Georgia' font-size='58' fill='%23daa614'>50</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #faf6ec;
+    --paper-deep: #efe7d5;
+    --paper-light: #fffdf7;
+    --ink: #14140f;
+    --ink-soft: #2a2921;
+    --muted: #6e685a;
+    --gold: #9a7b2f;
+    --gold-bright: #daa614;
+    --line: rgba(20, 20, 15, .18);
+    --line-light: rgba(250, 246, 236, .2);
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --mono: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --page: min(92vw, 1420px);
+    --nav-height: 78px;
+  }
+
+  * { box-sizing: border-box; }
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  html::-webkit-scrollbar { display: none; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    pointer-events: none;
+    opacity: .035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+  }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+  button, input { font: inherit; }
+  ::selection { background: var(--gold); color: var(--ink); }
+
+  .skip-link {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+    padding: 10px 14px;
+    background: var(--ink);
+    color: var(--paper);
+    transform: translateY(-150%);
+  }
+  .skip-link:focus { transform: translateY(0); }
+  .shell { width: var(--page); margin-inline: auto; }
+  .eyebrow {
+    margin: 0;
+    font-family: var(--mono);
+    font-size: .7rem;
+    line-height: 1.4;
+    letter-spacing: .06em;
+  }
+  .display {
+    margin: 0;
+    font-family: var(--serif);
+    font-weight: 500;
+    line-height: .94;
+    letter-spacing: -.045em;
+    text-wrap: balance;
+  }
+  .body-copy { max-width: 62ch; color: var(--muted); }
+
+  .announcement {
+    position: relative;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .7rem;
+    padding: 7px 20px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: .68rem;
+    letter-spacing: .055em;
+    text-align: center;
+  }
+  .announcement .gold { color: var(--gold-bright); }
+  .announcement-copy { display: inline-flex; align-items: center; gap: .7rem; }
+
+  .site-header {
+    position: absolute;
+    inset: 36px 0 auto;
+    z-index: 10;
+    height: var(--nav-height);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav {
+    position: relative;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 36px;
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    justify-self: start;
+    gap: .65rem;
+    text-decoration: none;
+  }
+  .brand-logo { width: 54px; height: 54px; object-fit: contain; }
+  .brand-name { font-family: var(--mono); font-size: .7rem; letter-spacing: .045em; }
+  .nav-links { display: flex; justify-content: center; gap: clamp(18px, 2.5vw, 42px); }
+  .nav-links a, .nav-cta {
+    font-family: var(--mono);
+    font-size: .78rem;
+    letter-spacing: .025em;
+    text-decoration: none;
+  }
+  .nav-links a { color: var(--muted); transition: color 180ms ease; }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-links a[aria-current="true"] { color: var(--ink); }
+  .nav-links a[aria-current="true"]::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-top: 4px;
+    background: var(--gold);
+  }
+  .nav-cta { justify-self: end; padding: 10px 15px; border: 1px solid var(--ink); transition: background 180ms ease, color 180ms ease; }
+  .nav-cta:hover { background: var(--ink); color: var(--paper); }
+  .menu-toggle { display: none; }
+
+  .hero {
+    min-height: calc(100svh - 36px);
+    display: grid;
+    grid-template-columns: minmax(0, 1.02fr) minmax(360px, .98fr);
+    align-items: center;
+    gap: clamp(36px, 7vw, 120px);
+    padding-top: calc(var(--nav-height) + 76px);
+    padding-bottom: 70px;
+  }
+  .hero-copy { min-width: 0; padding-top: 2vw; }
+  .hero-kicker { max-width: 48ch; color: var(--gold); margin-bottom: 28px; text-wrap: balance; }
+  .hero h1 { max-width: 790px; font-size: clamp(4.4rem, 8.2vw, 8.8rem); }
+  .hero h1 .line { display: block; }
+  .hero h1 .indent { margin-left: clamp(28px, 7vw, 108px); }
+  .hero-intro {
+    display: grid;
+    grid-template-columns: 1px minmax(0, 570px);
+    gap: 24px;
+    margin-top: 42px;
+    color: var(--muted);
+  }
+  .hero-intro::before { content: ""; background: var(--gold); }
+  .hero-intro p { margin: 0; font-size: clamp(.95rem, 1.3vw, 1.1rem); }
+  .button {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 20px;
+    border: 1px solid var(--ink);
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: .68rem;
+    letter-spacing: .025em;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+  }
+  .button:hover { transform: translateY(-2px); background: var(--gold); color: var(--ink); }
+  .button:active { transform: translateY(1px); }
+  .button--quiet { background: transparent; color: var(--ink); }
+  .button--quiet:hover { background: var(--paper-deep); }
+  .button .arrow { font-size: 1rem; line-height: 1; }
+
+  .hero-monument {
+    justify-self: end;
+    width: min(88%, 500px);
+    margin-right: clamp(0px, 2vw, 28px);
+  }
+  .hero-mark {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .date-rail { border-block: 1px solid var(--line); }
+  .date-rail-inner { display: grid; grid-template-columns: 1fr auto 1fr; align-items: stretch; }
+  .date-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: clamp(20px, 3vw, 44px);
+    align-items: center;
+    padding: 34px 0;
+  }
+  .date-item:last-child { justify-self: end; }
+  .date-number { color: var(--gold); font-family: var(--serif); font-size: clamp(3rem, 6vw, 5.5rem); line-height: .8; }
+  .date-meta { display: grid; gap: 4px; }
+  .date-meta strong { font-family: var(--serif); font-size: 1.25rem; font-weight: 500; }
+  .date-divider { width: 1px; margin: 0 clamp(30px, 6vw, 96px); background: var(--line); }
+
+  .section { padding: clamp(90px, 12vw, 180px) 0; }
+  .jubilee-layout {
+    display: grid;
+    grid-template-columns: minmax(280px, .82fr) minmax(0, 1.18fr);
+    gap: clamp(40px, 8vw, 120px);
+    align-items: start;
+  }
+  .section-title { max-width: 8ch; font-size: clamp(4rem, 7vw, 7.2rem); }
+  .section-lead {
+    max-width: 36ch;
+    margin: 32px 0 0;
+    color: var(--ink-soft);
+    font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+    line-height: 1.55;
+    text-wrap: pretty;
+  }
+  .jubilee-pillars { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+  .jubilee-pillar {
+    display: grid;
+    grid-template-columns: 54px 1fr;
+    gap: clamp(18px, 2.5vw, 36px);
+    padding: clamp(28px, 3.5vw, 48px) 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .jubilee-pillar .index { padding-top: 7px; color: var(--gold); }
+  .jubilee-pillar h3 {
+    margin: 0;
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    font-weight: 500;
+    line-height: 1.02;
+  }
+  .jubilee-pillar p { max-width: 45ch; margin: 12px 0 0; color: var(--muted); }
+  .milestone-record {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: clamp(54px, 7vw, 90px) 0 0;
+    border-block: 1px solid var(--line);
+  }
+  .milestone-record div { padding: 22px 24px 25px 0; }
+  .milestone-record div + div { padding-left: 24px; border-left: 1px solid var(--line); }
+  .milestone-record dt { color: var(--gold); font-family: var(--serif); font-size: clamp(2rem, 4vw, 3.8rem); line-height: 1; }
+  .milestone-record dd { margin: 9px 0 0; font-family: var(--mono); font-size: .68rem; letter-spacing: .025em; }
+  .date-meta .eyebrow, .programme-date, .jubilee-pillar .index { letter-spacing: .1em; text-transform: uppercase; }
+
+  .programme {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, var(--paper) 0%, var(--paper-deep) 28%, var(--paper-deep) 100%);
+    color: var(--ink);
+  }
+  .programme::after {
+    content: "1976 / 2026";
+    position: absolute;
+    right: -1rem;
+    top: 7rem;
+    color: rgba(20, 20, 15, .035);
+    font-family: var(--serif);
+    font-size: clamp(7rem, 18vw, 18rem);
+    line-height: .8;
+    pointer-events: none;
+  }
+  .programme .shell { position: relative; z-index: 1; }
+  .programme .eyebrow { color: var(--gold); }
+  .programme-head { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 64px; }
+  .programme-head > div > .eyebrow { margin-bottom: 12px; font-size: clamp(1rem, 1.35vw, 1.25rem); }
+  .programme-head h2 { font-size: clamp(4rem, 8vw, 8.8rem); }
+  .programme-head p { max-width: 42ch; margin: 0 0 12px; color: var(--muted); }
+  .programme-list { border-top: 1px solid var(--line); }
+  .programme-row {
+    display: grid;
+    grid-template-columns: 110px minmax(230px, .8fr) minmax(0, 1.2fr) auto;
+    gap: 30px;
+    align-items: center;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .programme-date { color: var(--gold); }
+  .programme-row h3 { margin: 0; font-family: var(--serif); font-size: clamp(1.6rem, 2.5vw, 2.3rem); font-weight: 500; }
+  .programme-row p { margin: 0; max-width: 48ch; color: var(--muted); }
+  .programme-status { color: var(--gold); white-space: nowrap; }
+
+  .alumni-layout {
+    display: grid;
+    grid-template-columns: minmax(300px, .86fr) minmax(0, 1.14fr);
+    gap: clamp(44px, 8vw, 120px);
+    align-items: center;
+  }
+  .alumni-photo { position: relative; margin: 0; aspect-ratio: 5 / 4; overflow: hidden; }
+  .alumni-photo figcaption {
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+    padding: 13px 18px;
+    background: var(--paper);
+    font-family: var(--mono);
+    font-size: .62rem;
+    letter-spacing: .04em;
+  }
+  .alumni-photo img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.75) contrast(1.03); }
+  .alumni-copy h2 { margin-top: 24px; font-size: clamp(4rem, 7.5vw, 8rem); }
+  .alumni-date {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin: 38px 0 26px;
+    padding: 20px 0;
+    border-block: 1px solid var(--line);
+  }
+  .alumni-date strong { color: var(--gold); font-family: var(--serif); font-size: clamp(2.7rem, 5vw, 4.8rem); font-weight: 500; line-height: 1; }
+  .alumni-date span { font-family: var(--mono); font-size: .72rem; letter-spacing: .035em; }
+  .alumni-copy .body-copy { margin: 0 0 36px; font-size: clamp(1.12rem, 1.5vw, 1.28rem); line-height: 1.65; }
+  .alumni-copy .button { min-height: 56px; padding: 15px 26px; font-size: .82rem; }
+
+  .invite { position: relative; overflow: hidden; background: var(--ink); color: var(--paper); }
+  .invite::before {
+    content: "50";
+    position: absolute;
+    top: 50%;
+    right: -.08em;
+    transform: translateY(-49%);
+    color: rgba(250, 246, 236, .035);
+    font-family: var(--serif);
+    font-size: min(42vw, 610px);
+    line-height: .7;
+  }
+  .invite-layout {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, .9fr) minmax(340px, .72fr);
+    gap: clamp(50px, 10vw, 170px);
+    align-items: start;
+  }
+  .invite-copy h2 { margin-top: 25px; font-size: clamp(4rem, 8vw, 8.2rem); }
+  .invite-copy p { max-width: 47ch; margin: 30px 0 0; color: rgba(250, 246, 236, .65); }
+  .invite-form { padding-top: 12px; }
+  .field { margin-bottom: 32px; }
+  .field label {
+    display: block;
+    margin-bottom: 8px;
+    color: rgba(250, 246, 236, .58);
+    font-family: var(--mono);
+    font-size: .65rem;
+    letter-spacing: .025em;
+  }
+  .field input {
+    width: 100%;
+    padding: 11px 0 14px;
+    border: 0;
+    border-bottom: 1px solid rgba(250, 246, 236, .45);
+    border-radius: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--paper);
+    font-size: 1rem;
+    transition: border-color 180ms ease;
+  }
+  .field input:focus { border-color: var(--gold-bright); }
+  .invite-note { margin: 0 0 28px; color: rgba(250, 246, 236, .48); font-size: .75rem; line-height: 1.7; }
+  .invite-form .button { border-color: var(--gold-bright); background: var(--gold-bright); color: var(--ink); cursor: pointer; }
+  .invite-form .button:hover { background: var(--paper); }
+  .invite-form .button:disabled { opacity: .55; cursor: wait; transform: none; }
+  .form-message { min-height: 28px; margin-top: 18px; color: var(--gold-bright); font-size: .85rem; }
+  .form-message.error { color: #eea38e; }
+
+  .site-footer { padding: 52px 0 36px; background: var(--ink); color: var(--paper); border-top: 1px solid var(--line-light); }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: start;
+    padding-bottom: 46px;
+  }
+  .footer-title { max-width: 22ch; margin: 0; font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 3rem); font-weight: 500; line-height: 1.15; }
+  .footer-links { display: grid; grid-template-columns: repeat(2, auto); gap: 12px 34px; }
+  .footer-links a { color: rgba(250, 246, 236, .72); font-size: .85rem; text-underline-offset: 4px; }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line-light);
+    color: rgba(250, 246, 236, .46);
+  }
+  .footer-bottom p { max-width: 64ch; margin: 0; font-family: var(--mono); font-size: .68rem; letter-spacing: .02em; }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 750ms cubic-bezier(.2, .7, .3, 1), transform 750ms cubic-bezier(.2, .7, .3, 1);
+  }
+  .reveal.in { opacity: 1; transform: none; }
+  a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 4px; }
+
+  @media (max-width: 980px) {
+    .nav { grid-template-columns: auto auto; justify-content: space-between; }
+    .menu-toggle {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: .65rem;
+      letter-spacing: .02em;
+      cursor: pointer;
+    }
+    .nav-links {
+      position: absolute;
+      top: var(--nav-height);
+      left: 4vw;
+      right: 4vw;
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      padding: 10px 20px 18px;
+      border: 1px solid var(--line);
+      background: var(--paper-light);
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 13px 0; border-bottom: 1px solid var(--line); }
+    .nav-links a:last-child { border-bottom: 0; }
+    .nav-cta { display: none; }
+    .hero { grid-template-columns: 1fr; gap: 48px; padding-top: calc(var(--nav-height) + 90px); }
+    .hero-copy { position: relative; z-index: 2; }
+    .hero-monument { justify-self: center; width: min(80vw, 560px); margin-top: -30px; }
+    .jubilee-layout { grid-template-columns: 1fr; }
+    .milestone-record { grid-template-columns: 1fr; }
+    .milestone-record div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+    .programme-head { align-items: start; flex-direction: column; }
+    .programme-row { grid-template-columns: 90px 1fr auto; }
+    .programme-row p { grid-column: 2 / 4; }
+    .alumni-layout { grid-template-columns: .82fr 1.18fr; gap: 42px; }
+    .invite-layout { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 680px) {
+    :root { --page: min(90vw, 1420px); --nav-height: 68px; }
+    .announcement { min-height: 42px; padding-inline: 68px; font-size: .58rem; }
+    .site-header { inset: 42px 0 auto; }
+    .brand-name { display: none; }
+    .hero-kicker { max-width: 34ch; font-size: .62rem; }
+    .hero { min-height: auto; padding-top: 160px; padding-bottom: 72px; }
+    .hero h1 { font-size: clamp(4rem, 20vw, 6.5rem); }
+    .hero h1 .indent { margin-left: 8vw; }
+    .hero-intro { margin-top: 30px; }
+    .button { width: 100%; }
+    .hero-monument { width: 100%; margin-top: -20px; }
+    .date-rail-inner { grid-template-columns: 1fr; }
+    .date-divider { width: auto; height: 1px; margin: 0; }
+    .date-item, .date-item:last-child { justify-self: stretch; }
+    .date-item { grid-template-columns: 92px 1fr; padding: 30px 0; }
+    .section { padding: 92px 0; }
+    .section-title { font-size: clamp(3.5rem, 18vw, 5.5rem); }
+    .jubilee-layout { gap: 54px; }
+    .jubilee-pillar { grid-template-columns: 42px 1fr; }
+    .programme-head h2 { font-size: clamp(4rem, 19vw, 6rem); }
+    .programme-row { grid-template-columns: 1fr; gap: 10px; }
+    .programme-row p, .programme-status { grid-column: auto; }
+    .programme-status { margin-top: 8px; }
+    .alumni-layout { grid-template-columns: 1fr; }
+    .alumni-photo { order: 2; }
+    .alumni-copy { order: 1; }
+    .alumni-date { align-items: flex-start; flex-direction: column; gap: 8px; }
+    .footer-top { grid-template-columns: 1fr; }
+    .footer-links { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="announcement">
+  <span class="announcement-copy">
+    <span class="gold">03 September 2026</span>
+    <span aria-hidden="true">·</span>
+    <span>The Golden Reveal</span>
+  </span>
+</div>
+
+<header class="site-header">
+  <nav class="nav shell" aria-label="Primary navigation">
+    <a class="brand" href="#top" aria-label="IEOR Golden Jubilee home">
+      <img class="brand-logo" src="assets/golden-jubilee-logo.png" width="1254" height="1254" alt="">
+      <span class="brand-name">IEOR · IIT Bombay</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navLinks">Menu</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#jubilee">The Jubilee</a>
+      <a href="#programme">Programme</a>
+      <a href="#alumni-meet">Alumni Meet</a>
+    </div>
+    <a class="nav-cta" href="#invite">Get the invite</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero shell" id="top" aria-labelledby="hero-title">
+    <div class="hero-copy reveal">
+      <p class="eyebrow hero-kicker">Industrial Engineering &amp; Operations Research · 1976–2026</p>
+      <h1 class="display" id="hero-title">
+        <span class="line">Fifty years</span>
+        <span class="line indent">of IEOR.</span>
+      </h1>
+      <div class="hero-intro">
+        <p>Since 1976, IEOR at IIT Bombay has brought industrial engineering and operations research into the same room: understanding how systems work, and how they can work better. In 2026, its people and its next questions come together.</p>
+      </div>
+    </div>
+
+    <div class="hero-monument reveal">
+      <img class="hero-mark" src="assets/golden-jubilee-logo.png" width="1254" height="1254" alt="IEOR IIT Bombay Golden Jubilee logo, 1976 to 2026">
+    </div>
+  </section>
+
+  <aside class="date-rail" aria-label="Key Golden Jubilee dates">
+    <div class="date-rail-inner shell">
+      <div class="date-item reveal">
+        <div class="date-number">03</div>
+        <div class="date-meta">
+          <span class="eyebrow">September 2026</span>
+          <strong>The Golden Reveal</strong>
+        </div>
+      </div>
+      <div class="date-divider" aria-hidden="true"></div>
+      <div class="date-item reveal">
+        <div class="date-number">28–29</div>
+        <div class="date-meta">
+          <span class="eyebrow">November 2026</span>
+          <strong>Grand Alumni Meet</strong>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <section class="section" id="jubilee" aria-labelledby="jubilee-title">
+    <div class="shell">
+      <div class="jubilee-layout">
+        <header class="jubilee-statement reveal">
+          <h2 class="display section-title" id="jubilee-title">What the Jubilee is for.</h2>
+          <p class="section-lead">The Jubilee puts the work behind IEOR on record, welcomes its alumni back to Powai, and asks what the department should become next.</p>
+        </header>
+
+        <ol class="jubilee-pillars reveal">
+          <li class="jubilee-pillar">
+            <span class="eyebrow index">01</span>
+            <div>
+              <h3>Remember the work</h3>
+              <p>Stories, people and decisions from five decades of IEOR at IIT Bombay.</p>
+            </div>
+          </li>
+          <li class="jubilee-pillar">
+            <span class="eyebrow index">02</span>
+            <div>
+              <h3>Bring every era back</h3>
+              <p>A Grand Alumni Meet built around cohorts, conversations and the department that connects them.</p>
+            </div>
+          </li>
+          <li class="jubilee-pillar">
+            <span class="eyebrow index">03</span>
+            <div>
+              <h3>Set the next direction</h3>
+              <p>Students, alumni and faculty shaping the infrastructure, research and opportunities that come next.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <dl class="milestone-record reveal" aria-label="Golden Jubilee timeline">
+        <div><dt>1976</dt><dd>IEOR begins at IIT Bombay</dd></div>
+        <div><dt>2026</dt><dd>Fifty years of the department</dd></div>
+        <div><dt>2076</dt><dd>A century of IEOR</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section programme" id="programme" aria-labelledby="programme-title">
+    <div class="shell">
+      <div class="programme-head reveal">
+        <div>
+          <p class="eyebrow">2026–2027</p>
+          <h2 class="display" id="programme-title">The year<br>ahead.</h2>
+        </div>
+        <p>A year-long programme across research, community and the people who carried IEOR beyond Powai.</p>
+      </div>
+
+      <div class="programme-list reveal">
+        <article class="programme-row">
+          <span class="eyebrow programme-date">03 Sep</span>
+          <h3>The Golden Reveal</h3>
+          <p>The Jubilee identity is unveiled and the year begins in gold.</p>
+          <span class="eyebrow programme-status">Next</span>
+        </article>
+        <article class="programme-row">
+          <span class="eyebrow programme-date">Open now</span>
+          <h3>The Next Fifty</h3>
+          <p>Current students put the department's needs for 2036 on record.</p>
+          <span class="eyebrow programme-status">Student vision sheet</span>
+        </article>
+        <article class="programme-row">
+          <span class="eyebrow programme-date">28–29 Nov</span>
+          <h3>Grand Alumni Meet</h3>
+          <p>Two days at IIT Bombay for reunions, conversations and the next chapter.</p>
+          <span class="eyebrow programme-status">Save the date</span>
+        </article>
+        <article class="programme-row">
+          <span class="eyebrow programme-date">Across the year</span>
+          <h3>Research &amp; student programme</h3>
+          <p>Academic sessions, student initiatives and further programme announcements through official IEOR channels.</p>
+          <span class="eyebrow programme-status">Details to follow</span>
+        </article>
+        <article class="programme-row">
+          <span class="eyebrow programme-date">Mar 2027</span>
+          <h3>IEOR Day</h3>
+          <p>The department's annual gathering closes the Golden Jubilee year.</p>
+          <span class="eyebrow programme-status">Closing chapter</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="alumni-meet" aria-labelledby="alumni-title">
+    <div class="shell alumni-layout">
+      <figure class="alumni-photo reveal">
+        <img src="assets/ieor-building.jpg" width="1250" height="1270" alt="The IEOR building at IIT Bombay, framed by trees">
+        <figcaption>IEOR · IIT Bombay · Powai</figcaption>
+      </figure>
+      <div class="alumni-copy reveal">
+        <p class="eyebrow">Grand Alumni Meet · IIT Bombay</p>
+        <h2 class="display" id="alumni-title">Welcome back<br>to Powai.</h2>
+        <div class="alumni-date">
+          <strong>28–29</strong>
+          <span>November 2026<br>Save the date</span>
+        </div>
+        <p class="body-copy">Welcome back to the department. Registration is not open yet; leave your email and batch year to receive the official programme and registration announcement when they are ready.</p>
+        <a class="button button--quiet" href="#invite">Join the updates list</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section invite" id="invite" aria-labelledby="invite-title">
+    <div class="shell invite-layout">
+      <div class="invite-copy reveal">
+        <p class="eyebrow">Stay in the record</p>
+        <h2 class="display" id="invite-title">Hear it<br>from IEOR.</h2>
+        <p>This is the Jubilee updates list, not event registration. We will write when the official programme and registration open.</p>
+      </div>
+
+      <form class="invite-form reveal" id="capForm" novalidate>
+        <div class="field">
+          <label for="capEmail">Email address</label>
+          <input id="capEmail" type="email" name="email" autocomplete="email" inputmode="email" required aria-describedby="privacy-note">
+        </div>
+        <div class="field">
+          <label for="capBatch">Batch year <span aria-hidden="true">·</span> optional</label>
+          <input id="capBatch" type="text" name="batch" inputmode="numeric" maxlength="4" autocomplete="off" placeholder="1994">
+        </div>
+        <p class="invite-note" id="privacy-note">Your batch year helps us reach every decade. These details are collected only for Golden Jubilee communication.</p>
+        <button class="button" type="submit" id="capBtn">Join the updates list <span class="arrow" aria-hidden="true">→</span></button>
+        <div class="form-message" id="capMsg" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-top">
+      <p class="footer-title">Department of Industrial Engineering and Operations Research, IIT Bombay</p>
+      <div class="footer-links">
+        <a href="#programme">Programme</a>
+        <a href="#alumni-meet">Alumni Meet</a>
+        <a href="https://www.ieor.iitb.ac.in/next-fifty/">The Next Fifty</a>
+        <a href="#privacy-note">Privacy</a>
+        <a href="mailto:24b4530@iitb.ac.in">Jubilee enquiries</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Golden Jubilee · IEOR · IIT Bombay · 1976–2026</p>
+      <p>Powai, Mumbai 400076</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  console.log('IEOR Golden Jubilee v0.5.2');
+
+  const menuButton = document.querySelector('.menu-toggle');
+  const navLinks = document.getElementById('navLinks');
+
+  const closeMenu = () => {
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.textContent = 'Menu';
+    navLinks.classList.remove('open');
+  };
+
+  menuButton.addEventListener('click', () => {
+    const open = menuButton.getAttribute('aria-expanded') === 'true';
+    menuButton.setAttribute('aria-expanded', String(!open));
+    menuButton.textContent = open ? 'Menu' : 'Close';
+    navLinks.classList.toggle('open', !open);
+  });
+
+  navLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('pointerdown', (event) => {
+    if (!event.target.closest('.site-header')) closeMenu();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeMenu();
+      if (menuButton.offsetParent !== null) menuButton.focus();
+    }
+  });
+
+  const sectionLinks = new Map(
+    [...navLinks.querySelectorAll('a[href^="#"]')].map((link) => [link.hash.slice(1), link]),
+  );
+  if ('IntersectionObserver' in window) {
+    const navObserver = new IntersectionObserver((entries) => {
+      const current = entries.find((entry) => entry.isIntersecting);
+      if (!current) return;
+      sectionLinks.forEach((link, id) => {
+        if (id === current.target.id) link.setAttribute('aria-current', 'true');
+        else link.removeAttribute('aria-current');
+      });
+    }, { rootMargin: '-24% 0px -66% 0px' });
+    sectionLinks.forEach((_, id) => {
+      const section = document.getElementById(id);
+      if (section) navObserver.observe(section);
+    });
+  }
+
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealElements = document.querySelectorAll('.reveal');
+
+  if (reducedMotion || !('IntersectionObserver' in window)) {
+    revealElements.forEach((element) => element.classList.add('in'));
+  } else {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .12, rootMargin: '0px 0px -36px' });
+
+    revealElements.forEach((element) => observer.observe(element));
+  }
+
+  const form = document.getElementById('capForm');
+  const button = document.getElementById('capBtn');
+  const message = document.getElementById('capMsg');
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const email = form.email.value.trim();
+    const batch = form.batch.value.trim();
+    message.className = 'form-message';
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      message.className = 'form-message error';
+      message.textContent = 'That email does not look right. Please check it.';
+      form.email.focus();
+      return;
+    }
+
+    if (batch && !/^(19|20)\d{2}$/.test(batch)) {
+      message.className = 'form-message error';
+      message.textContent = 'Batch year should be four digits, like 1994.';
+      form.batch.focus();
+      return;
+    }
+
+    button.disabled = true;
+    const original = button.innerHTML;
+    button.textContent = 'Sending';
+
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, batch })
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(data.error || 'We could not save that just now.');
+
+      form.reset();
+      message.textContent = data.duplicate
+        ? 'You are already on the list. We will be in touch.'
+        : 'You are on the list. We will write when the next announcement is ready.';
+    } catch (error) {
+      message.className = 'form-message error';
+      message.textContent = `${error.message} You can also email 24b4530@iitb.ac.in.`;
+    } finally {
+      button.disabled = false;
+      button.innerHTML = original;
+    }
+  });
+
+</script>
+</body>
+</html>
