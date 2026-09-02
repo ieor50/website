@@ -9,7 +9,7 @@ The homepage is plain HTML, CSS, and JavaScript. The only server-side component 
 ## Deploy
 
 Deploy this repository on Vercel and provide `BLOB_READ_WRITE_TOKEN` in the production
-environment. The production hostname is `gj.theharshitsingh.com`.
+environment. The production hostname is `ieor-gj.theharshitsingh.com`.
 
 ## Verify
 

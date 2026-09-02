@@ -8,7 +8,7 @@ await access(new URL('./assets/ieor-building.jpg', import.meta.url));
 await access(new URL('./api/subscribe.js', import.meta.url));
 
 assert.match(html, /fetch\('\/api\/subscribe'/);
-assert.match(html, /<link rel="canonical" href="https:\/\/gj\.theharshitsingh\.com\/">/);
+assert.match(html, /<link rel="canonical" href="https:\/\/ieor-gj\.theharshitsingh\.com\/">/);
 assert.doesNotMatch(html, /ieor-golden-jubilee\.vercel\.app/);
 assert.match(html, /id="jubilee-title">What the Jubilee is for\.<\/h2>/);
 assert.match(html, /<dt>2076<\/dt><dd>A century of IEOR<\/dd>/);
