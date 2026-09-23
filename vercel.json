@@ -1,3 +1,35 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/ieor-gj",
+      "has": [{ "type": "host", "value": "ieor-gj.theharshitsingh.com" }],
+      "destination": "https://work.hsbhandari.dev/ieor-gj/",
+      "permanent": true
+    },
+    {
+      "source": "/ieor-gj/",
+      "has": [{ "type": "host", "value": "ieor-gj.theharshitsingh.com" }],
+      "destination": "https://work.hsbhandari.dev/ieor-gj/",
+      "permanent": true
+    },
+    {
+      "source": "/ieor-gj/:path*",
+      "has": [{ "type": "host", "value": "ieor-gj.theharshitsingh.com" }],
+      "destination": "https://work.hsbhandari.dev/ieor-gj/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "ieor-gj.theharshitsingh.com" }],
+      "destination": "https://work.hsbhandari.dev/ieor-gj/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "ieor-gj.theharshitsingh.com" }],
+      "destination": "https://work.hsbhandari.dev/ieor-gj/:path*",
+      "permanent": true
+    }
+  ]
 }

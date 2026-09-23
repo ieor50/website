@@ -9,7 +9,8 @@ The homepage is plain HTML, CSS, and JavaScript. The only server-side component 
 ## Deploy
 
 Deploy this repository on Vercel and provide `BLOB_READ_WRITE_TOKEN` in the production
-environment. The production hostname is `ieor-gj.theharshitsingh.com`.
+environment. The production URL is `https://work.hsbhandari.dev/ieor-gj/` (served behind
+a path proxy; the origin still serves the same files at its own root).
 
 ## Verify
 
