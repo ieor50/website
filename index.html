@@ -8,15 +8,15 @@
 <meta property="og:title" content="IEOR Golden Jubilee · IIT Bombay · 1976–2026">
 <meta property="og:description" content="The Golden Reveal arrives 3 September. The Grand Alumni Meet follows 21 and 22 November 2026 at IIT Bombay.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://work.hsbhandari.dev/ieor-gj/">
+<meta property="og:url" content="https://www.ieor.iitb.ac.in/golden-jubilee/">
 <meta property="og:site_name" content="IEOR Golden Jubilee">
-<meta property="og:image" content="https://work.hsbhandari.dev/ieor-gj/assets/golden-jubilee-logo.png">
+<meta property="og:image" content="https://www.ieor.iitb.ac.in/golden-jubilee/assets/golden-jubilee-logo.png">
 <meta property="og:image:alt" content="IEOR IIT Bombay Golden Jubilee logo, 1976 to 2026">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="IEOR Golden Jubilee · IIT Bombay · 1976–2026">
 <meta name="twitter:description" content="The Golden Reveal arrives 3 September. The Grand Alumni Meet follows 21 and 22 November 2026 at IIT Bombay.">
-<meta name="twitter:image" content="https://work.hsbhandari.dev/ieor-gj/assets/golden-jubilee-logo.png">
-<link rel="canonical" href="https://work.hsbhandari.dev/ieor-gj/">
+<meta name="twitter:image" content="https://www.ieor.iitb.ac.in/golden-jubilee/assets/golden-jubilee-logo.png">
+<link rel="canonical" href="https://www.ieor.iitb.ac.in/golden-jubilee/">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#faf6ec">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%2314140f'/><text x='50' y='67' text-anchor='middle' font-family='Georgia' font-size='58' fill='%23daa614'>50</text></svg>">
@@ -808,7 +808,7 @@
     button.textContent = 'Sending';
 
     try {
-      const response = await fetch('api/subscribe', {
+      const response = await fetch('api/subscribe.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, batch })
@@ -817,9 +817,7 @@
       if (!response.ok) throw new Error(data.error || 'We could not save that just now.');
 
       form.reset();
-      message.textContent = data.duplicate
-        ? 'You are already on the list. We will be in touch.'
-        : 'You are on the list. We will write when the next announcement is ready.';
+      message.textContent = 'You are on the list. We will write when the next announcement is ready.';
     } catch (error) {
       message.className = 'form-message error';
       message.textContent = `${error.message} You can also email 24b4530@iitb.ac.in.`;

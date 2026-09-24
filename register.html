@@ -139,7 +139,7 @@
 </header>
 
 <main>
-  <div class="prototype">Registration preview. Fees, programme inclusions, and payment are awaiting final approval.</div>
+  <div class="prototype">Registration details are securely encrypted when submitted. Fees, programme inclusions, and payment remain subject to final approval.</div>
 
   <div class="registration shell" id="registration">
     <form id="registrationForm" novalidate>
@@ -198,9 +198,9 @@
           <div class="summary-line"><span>Attendance</span><span id="daysSummary">Both days</span></div>
         </div>
         <p class="fee"><strong>Registration fee: ₹500 Crores Only</strong>Payment via UPI Only. Applicable to the complete registration party. Payment instructions will be provided after the details are reviewed.</p>
-        <label class="consent"><input type="checkbox" form="registrationForm" required><span>I confirm that the information provided is accurate and consent to its use for Grand Alumni Meet registration and communication.</span></label>
-        <button class="submit" type="submit" form="registrationForm">Review registration</button>
-        <p class="secure-note">No payment is collected in this preview.</p>
+        <label class="consent"><input id="consent" name="consent" type="checkbox" form="registrationForm" required><span>I confirm that the information provided is accurate and consent to its use for Grand Alumni Meet registration and communication.</span></label>
+        <button class="submit" type="submit" form="registrationForm">Submit registration</button>
+        <p class="secure-note" role="status" aria-live="polite">No payment is collected through this form.</p>
       </div>
     </aside>
   </div>
@@ -244,10 +244,54 @@
   });
 
   document.querySelectorAll('input[name="days"]').forEach(input => input.addEventListener('change', updateSummary));
-  document.getElementById('registrationForm').addEventListener('submit', event => {
+  document.getElementById('registrationForm').addEventListener('submit', async event => {
     event.preventDefault();
     if (!event.currentTarget.reportValidity()) return;
-    document.querySelector('.secure-note').textContent = 'Preview complete. Payment and final submission will be connected after approval.';
+    const form = event.currentTarget;
+    const button = document.querySelector('.submit');
+    const status = document.querySelector('.secure-note');
+    const guests = [...list.children].map(guest => ({
+      name: guest.querySelector('[name="guestName[]"]').value.trim(),
+      relationship: guest.querySelector('[name="guestRelationship[]"]').value,
+      age: guest.querySelector('[name="guestAge[]"]').value,
+      days: guest.querySelector('[name="guestDays[]"]').value
+    }));
+    const body = {
+      name: form.name.value.trim(),
+      email: form.email.value.trim(),
+      phone: form.phone.value.trim(),
+      batch: form.batch.value.trim(),
+      degree: form.degree.value,
+      organisation: form.organisation.value.trim(),
+      days: form.days.value,
+      city: form.city.value.trim(),
+      stay: form.stay.value,
+      accessibility: form.accessibility.value.trim(),
+      consent: form.consent.checked,
+      guests
+    };
+
+    button.disabled = true;
+    button.textContent = 'Submitting';
+    status.textContent = 'Encrypting and saving your registration.';
+    try {
+      const response = await fetch('api/register.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(data.error || 'We could not save that just now.');
+      form.reset();
+      list.replaceChildren();
+      updateSummary();
+      status.textContent = 'Registration received. We will contact you with the confirmed programme and payment details.';
+      button.textContent = 'Registration submitted';
+    } catch (error) {
+      status.textContent = error.message;
+      button.disabled = false;
+      button.textContent = 'Submit registration';
+    }
   });
 </script>
 </body>
