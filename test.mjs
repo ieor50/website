@@ -5,31 +5,33 @@ const html = await readFile(new URL('./index.html', import.meta.url), 'utf8');
 
 await access(new URL('./assets/golden-jubilee-logo.png', import.meta.url));
 await access(new URL('./assets/ieor-building.jpg', import.meta.url));
-await access(new URL('./api/subscribe.php', import.meta.url));
-await access(new URL('./api/register.php', import.meta.url));
-await access(new URL('./api/export.php', import.meta.url));
-await access(new URL('./lib/storage.php', import.meta.url));
-await access(new URL('./data/.htaccess', import.meta.url));
+await access(new URL('./alumni-meet/index.html', import.meta.url));
 
-assert.match(html, /fetch\('api\/subscribe\.php'/);
 assert.match(html, /<link rel="canonical" href="https:\/\/www\.ieor\.iitb\.ac\.in\/golden-jubilee\/">/);
 assert.doesNotMatch(html, /ieor-golden-jubilee\.vercel\.app/);
 assert.match(html, /id="jubilee-title">What the Jubilee is for\.<\/h2>/);
 assert.match(html, /<dt>2076<\/dt><dd>A century of IEOR<\/dd>/);
 assert.match(html, /21 and 22 November 2026/);
+assert.doesNotMatch(html, /class="hero-kicker"|class="hero-monument"|class="date-rail"/);
+assert.match(html, /<span class="line">Fifty years<\/span>/);
 assert.doesNotMatch(html, /28(?:–29| and 29) November 2026/);
-assert.doesNotMatch(html, /data-review-id|review\.js|reviewToken|localReview|\/api\/review/);
+assert.match(html, /href="\/alumni-meet\/"[^>]*target="_blank"/);
+assert.match(html, /href="\/golden-reveal\/"/);
+assert.match(html, /programme-status">Held/);
+await access(new URL('./golden-reveal/index.html', import.meta.url));
+await access(new URL('./assets/golden-reveal/mark-unveiled.jpg', import.meta.url));
+const reveal = await readFile(new URL('./golden-reveal/index.html', import.meta.url), 'utf8');
+assert.match(reveal, /The mark is out\./);
+assert.match(reveal, /3 September 2026/);
+assert.doesNotMatch(reveal, /—|–/);
+assert.match(html, /Indian Registration/);
+assert.match(html, /International Registration/);
+assert.doesNotMatch(html, /Get the invite|Join the updates list|fetch\(['"]api\//);
 
-const registration = await readFile(new URL('./register.html', import.meta.url), 'utf8');
-assert.match(registration, /fetch\('api\/register\.php'/);
-assert.match(registration, /name="consent"/);
-assert.doesNotMatch(registration, /Preview complete/);
+const schedule = await readFile(new URL('./alumni-meet/index.html', import.meta.url), 'utf8');
+assert.match(schedule, /Saturday/);
+assert.match(schedule, /Alumni-Faculty Presentations/);
+assert.match(schedule, /Gala Dinner &amp; Cultural Evening/);
+assert.match(schedule, /Alumni-Student Interaction Session/);
 
-const config = await readFile(new URL('./lib/config.php', import.meta.url), 'utf8');
-assert.doesNotMatch(config, /REPLACE_WITH_/);
-assert.doesNotMatch(config, /GJ_PRIVATE_KEY/);
-
-const ignore = await readFile(new URL('./.gitignore', import.meta.url), 'utf8');
-assert.match(ignore, /data\/\*/);
-
-console.log('ok: production pages, encrypted PHP APIs, protected data, and review code exclusion');
+console.log('ok: static Golden Jubilee page, Alumni Meet schedule, and official registration links');

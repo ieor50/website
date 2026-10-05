@@ -10,19 +10,19 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.ieor.iitb.ac.in/golden-jubilee/">
 <meta property="og:site_name" content="IEOR Golden Jubilee">
-<meta property="og:image" content="https://www.ieor.iitb.ac.in/golden-jubilee/assets/golden-jubilee-logo.png">
+<meta property="og:image" content="https://www.ieor.iitb.ac.in/golden-jubilee/assets/building/front.jpg">
 <meta property="og:image:alt" content="IEOR IIT Bombay Golden Jubilee logo, 1976 to 2026">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="IEOR Golden Jubilee · IIT Bombay · 1976–2026">
 <meta name="twitter:description" content="The Golden Reveal arrives 3 September. The Grand Alumni Meet follows 21 and 22 November 2026 at IIT Bombay.">
-<meta name="twitter:image" content="https://www.ieor.iitb.ac.in/golden-jubilee/assets/golden-jubilee-logo.png">
+<meta name="twitter:image" content="https://www.ieor.iitb.ac.in/golden-jubilee/assets/building/front.jpg">
 <link rel="canonical" href="https://www.ieor.iitb.ac.in/golden-jubilee/">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#faf6ec">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%2314140f'/><text x='50' y='67' text-anchor='middle' font-family='Georgia' font-size='58' fill='%23daa614'>50</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Felipa&family=Inter:wght@400;500;600&family=Mea+Culpa&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
 <style>
   :root {
     --paper: #faf6ec;
@@ -39,7 +39,7 @@
     --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --mono: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --page: min(92vw, 1420px);
-    --nav-height: 78px;
+    --nav-height: 92px;
   }
 
   * { box-sizing: border-box; }
@@ -124,7 +124,7 @@
     gap: .65rem;
     text-decoration: none;
   }
-  .brand-logo { width: 54px; height: 54px; object-fit: contain; }
+  .brand-logo { width: 72px; height: 72px; object-fit: contain; }
   .brand-name { font-family: var(--mono); font-size: .7rem; letter-spacing: .045em; }
   .nav-links { display: flex; justify-content: center; gap: clamp(18px, 2.5vw, 42px); }
   .nav-links a, .nav-cta {
@@ -151,26 +151,47 @@
   .hero {
     min-height: 100svh;
     display: grid;
-    grid-template-columns: minmax(0, 1.02fr) minmax(360px, .98fr);
+    grid-template-columns: 1fr;
     align-items: center;
     gap: clamp(36px, 7vw, 120px);
     padding-top: calc(var(--nav-height) + 76px);
     padding-bottom: 70px;
   }
-  .hero-copy { min-width: 0; padding-top: 2vw; }
+  .hero-copy {
+    min-width: 0;
+    padding-top: 2vw;
+    display: grid;
+    grid-template-columns: max-content minmax(220px, 1fr);
+    gap: clamp(28px, 4vw, 72px);
+    align-items: end;
+  }
   .hero-kicker { max-width: 48ch; color: var(--gold); margin-bottom: 28px; text-wrap: balance; }
-  .hero h1 { max-width: 790px; font-size: clamp(4.4rem, 8.2vw, 8.8rem); }
-  .hero h1 .line { display: block; }
-  .hero h1 .indent { margin-left: clamp(28px, 7vw, 108px); }
+  .hero h1 {
+    font-family: "Mea Culpa", cursive;
+    font-weight: 400;
+    font-size: clamp(4.4rem, 9vw, 9rem);
+    letter-spacing: 0;
+    line-height: 1.05;
+  }
+  .hero h1 .line { display: block; white-space: nowrap; }
+  .hero h1 .line + .line { margin-top: 0.16em; }
+  .hero h1 .split-char { display: inline-block; }
+  .hero h1 .indent {
+    margin-left: max(0px, calc(20vw - (100vw - min(92vw, 1420px)) / 2));
+    font-family: "Felipa", cursive;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
   .hero-intro {
     display: grid;
     grid-template-columns: 1px minmax(0, 570px);
     gap: 24px;
-    margin-top: 42px;
+    margin-top: 0;
+    align-self: center;
     color: var(--muted);
   }
   .hero-intro::before { content: ""; background: var(--gold); }
-  .hero-intro p { margin: 0; font-size: clamp(.95rem, 1.3vw, 1.1rem); }
+  .hero-intro p { margin: 0; font-size: clamp(1.25rem, 2.1vw, 1.85rem); line-height: 1.45; }
   .button {
     display: inline-flex;
     min-height: 48px;
@@ -204,6 +225,27 @@
     height: auto;
     object-fit: contain;
   }
+
+  .seen { padding: 0 0 clamp(20px, 4vw, 48px); }
+  .seen-grid {
+    display: grid;
+    grid-template-columns: 1.35fr .72fr;
+    gap: 14px;
+    align-items: stretch;
+  }
+  .seen-side { display: grid; gap: 14px; }
+  .seen figure { margin: 0; }
+  .seen img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .seen-lead img { aspect-ratio: 4 / 3; min-height: 100%; }
+  .seen-side img { aspect-ratio: 16 / 10; }
+  .seen figcaption {
+    margin-top: 8px;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: .68rem;
+    letter-spacing: .03em;
+  }
+  .seen a { color: inherit; }
 
   .date-rail { border-block: 1px solid var(--line); }
   .date-rail-inner { display: grid; grid-template-columns: 1fr auto 1fr; align-items: stretch; }
@@ -334,57 +376,23 @@
   .alumni-copy .body-copy { margin: 0 0 36px; font-size: clamp(1.12rem, 1.5vw, 1.28rem); line-height: 1.65; }
   .alumni-copy .button { min-height: 56px; padding: 15px 26px; font-size: .82rem; }
 
-  .invite { position: relative; overflow: hidden; background: var(--ink); color: var(--paper); }
-  .invite::before {
-    content: "50";
-    position: absolute;
-    top: 50%;
-    right: -.08em;
-    transform: translateY(-49%);
-    color: rgba(250, 246, 236, .035);
-    font-family: var(--serif);
-    font-size: min(42vw, 610px);
-    line-height: .7;
-  }
-  .invite-layout {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: minmax(0, .9fr) minmax(340px, .72fr);
-    gap: clamp(50px, 10vw, 170px);
-    align-items: start;
-  }
-  .invite-copy h2 { margin-top: 25px; font-size: clamp(4rem, 8vw, 8.2rem); }
-  .invite-copy p { max-width: 47ch; margin: 30px 0 0; color: rgba(250, 246, 236, .65); }
-  .invite-form { padding-top: 12px; }
-  .field { margin-bottom: 32px; }
-  .field label {
-    display: block;
-    margin-bottom: 8px;
-    color: rgba(250, 246, 236, .58);
-    font-family: var(--mono);
-    font-size: .65rem;
-    letter-spacing: .025em;
-  }
-  .field input {
-    width: 100%;
-    padding: 11px 0 14px;
-    border: 0;
-    border-bottom: 1px solid rgba(250, 246, 236, .45);
-    border-radius: 0;
-    outline: 0;
-    background: transparent;
-    color: var(--paper);
-    font-size: 1rem;
-    transition: border-color 180ms ease;
-  }
-  .field input:focus { border-color: var(--gold-bright); }
-  .invite-note { margin: 0 0 28px; color: rgba(250, 246, 236, .48); font-size: .75rem; line-height: 1.7; }
-  .invite-form .button { border-color: var(--gold-bright); background: var(--gold-bright); color: var(--ink); cursor: pointer; }
-  .invite-form .button:hover { background: var(--paper); }
-  .invite-form .button:disabled { opacity: .55; cursor: wait; transform: none; }
-  .form-message { min-height: 28px; margin-top: 18px; color: var(--gold-bright); font-size: .85rem; }
-  .form-message.error { color: #eea38e; }
+  .register { position: relative; overflow: hidden; background: var(--ink); color: var(--paper); }
+  .register::before { content: "50"; position: absolute; top: 50%; right: -.08em; transform: translateY(-49%); color: rgba(250, 246, 236, .035); font-family: var(--serif); font-size: min(42vw, 610px); line-height: .7; }
+  .register-layout { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, .9fr) minmax(340px, .72fr); gap: clamp(50px, 10vw, 170px); align-items: start; }
+  .register-copy h2 { margin-top: 25px; font-size: clamp(4rem, 8vw, 8.2rem); }
+  .register-copy p { max-width: 47ch; margin: 30px 0 0; color: rgba(250, 246, 236, .65); }
+  .register-links { display: grid; gap: 14px; padding-top: 12px; }
+  .register-link { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 24px 0; border-block: 1px solid rgba(250, 246, 236, .28); color: var(--paper); text-decoration: none; transition: color 180ms ease, border-color 180ms ease, transform 180ms ease; }
+  .register-link + .register-link { border-top: 0; }
+  .register-link:hover { color: var(--gold-bright); border-color: var(--gold-bright); transform: translateX(5px); }
+  .register-link .eyebrow { display: block; margin-bottom: 8px; color: rgba(250, 246, 236, .5); }
+  .register-link strong { font-family: var(--serif); font-size: clamp(1.6rem, 2.7vw, 2.5rem); font-weight: 500; }
+  .register-link .arrow, .register-events .arrow { color: var(--gold-bright); font-size: 1.4rem; }
+  .register-events { margin-top: 14px; color: rgba(250, 246, 236, .72); font-family: var(--mono); font-size: .75rem; text-underline-offset: 5px; }
+  .register-events:hover { color: var(--gold-bright); }
+  .programme-link { text-decoration: none; text-underline-offset: 5px; }
+  .programme-link:hover { color: var(--gold); }
+  .programme-link .arrow { color: var(--gold); font-family: var(--sans); font-size: .8em; }
 
   .site-footer { padding: 52px 0 36px; background: var(--ink); color: var(--paper); border-top: 1px solid var(--line-light); }
   .footer-top {
@@ -461,17 +469,19 @@
     .programme-row { grid-template-columns: 90px 1fr auto; }
     .programme-row p { grid-column: 2 / 4; }
     .alumni-layout { grid-template-columns: .82fr 1.18fr; gap: 42px; }
-    .invite-layout { grid-template-columns: 1fr; }
+    .register-layout { grid-template-columns: 1fr; }
   }
 
   @media (max-width: 680px) {
-    :root { --page: min(90vw, 1420px); --nav-height: 68px; }
+    :root { --page: min(90vw, 1420px); --nav-height: 76px; }
+    .brand-logo { width: 58px; height: 58px; }
     .site-header { inset: 42px 0 auto; }
     .brand-name { display: none; }
     .hero-kicker { max-width: 34ch; font-size: .62rem; }
     .hero { min-height: auto; padding-top: 160px; padding-bottom: 72px; }
+    .hero-copy { grid-template-columns: 1fr; }
     .hero h1 { font-size: clamp(4rem, 20vw, 6.5rem); }
-    .hero h1 .indent { margin-left: 8vw; }
+    .hero h1 .indent { margin-left: 12vw; }
     .hero-intro { margin-top: 30px; }
     .button { width: 100%; }
     .hero-monument { width: 100%; margin-top: -20px; }
@@ -487,6 +497,7 @@
     .programme-row { grid-template-columns: 1fr; gap: 10px; }
     .programme-row p, .programme-status { grid-column: auto; }
     .programme-status { margin-top: 8px; }
+    .seen-grid { grid-template-columns: 1fr; }
     .alumni-layout { grid-template-columns: 1fr; }
     .alumni-photo { order: 2; }
     .alumni-copy { order: 1; }
@@ -518,14 +529,13 @@
       <a href="#programme">Programme</a>
       <a href="#alumni-meet">Alumni Meet</a>
     </div>
-    <a class="nav-cta" href="#invite">Get the invite</a>
+    <a class="nav-cta" href="#register">Register</a>
   </nav>
 </header>
 
 <main id="main">
   <section class="hero shell" id="top" aria-labelledby="hero-title">
     <div class="hero-copy reveal">
-      <p class="eyebrow hero-kicker">Industrial Engineering &amp; Operations Research · 1976–2026</p>
       <h1 class="display" id="hero-title">
         <span class="line">Fifty years</span>
         <span class="line indent">of IEOR.</span>
@@ -535,30 +545,25 @@
       </div>
     </div>
 
-    <div class="hero-monument reveal">
-      <img class="hero-mark" src="assets/golden-jubilee-logo.png" width="1254" height="1254" alt="IEOR IIT Bombay Golden Jubilee logo, 1976 to 2026">
-    </div>
+
   </section>
 
-  <aside class="date-rail" aria-label="Key Golden Jubilee dates">
-    <div class="date-rail-inner shell">
-      <div class="date-item reveal">
-        <div class="date-number">03</div>
-        <div class="date-meta">
-          <span class="eyebrow">September 2026</span>
-          <strong>The Golden Reveal</strong>
-        </div>
-      </div>
-      <div class="date-divider" aria-hidden="true"></div>
-      <div class="date-item reveal">
-        <div class="date-number">21 and 22</div>
-        <div class="date-meta">
-          <span class="eyebrow">November 2026</span>
-          <strong>Grand Alumni Meet</strong>
-        </div>
+  <section class="seen shell" aria-label="The IEOR building">
+    <div class="seen-grid">
+      <figure class="seen-lead">
+        <img src="assets/building/front.jpg" width="1800" height="1350" alt="The IEOR building at IIT Bombay, with the Fifty Years banner on the blue facade">
+        <figcaption>The department, Powai</figcaption>
+      </figure>
+      <div class="seen-side">
+        <figure>
+          <img src="assets/building/purple-banner.jpg" width="1800" height="1350" alt="The purple Golden Jubilee banner on the IEOR building">
+        </figure>
+        <figure>
+          <img src="assets/building/banner-and-board.jpg" width="1800" height="1350" alt="The department name board under the Golden Jubilee banner">
+        </figure>
       </div>
     </div>
-  </aside>
+  </section>
 
   <section class="section" id="jubilee" aria-labelledby="jubilee-title">
     <div class="shell">
@@ -614,19 +619,19 @@
       <div class="programme-list reveal">
         <article class="programme-row">
           <span class="eyebrow programme-date">03 Sep</span>
-          <h3>The Golden Reveal</h3>
-          <p>The Jubilee identity is unveiled and the year begins in gold.</p>
-          <span class="eyebrow programme-status">Next</span>
+          <h3><a class="programme-link" href="/golden-reveal/">The Golden Reveal <span class="arrow" aria-hidden="true">↗</span></a></h3>
+          <p>The Jubilee identity was unveiled at the IEOR building, and the year began in gold.</p>
+          <span class="eyebrow programme-status">Held</span>
         </article>
         <article class="programme-row">
           <span class="eyebrow programme-date">Open now</span>
-          <h3>The Next Fifty</h3>
+          <h3><a class="programme-link" href="https://www.ieor.iitb.ac.in/next-fifty/" target="_blank" rel="noopener">The Next Fifty <span class="arrow" aria-hidden="true">↗</span></a></h3>
           <p>Current students put the department's needs for 2036 on record.</p>
           <span class="eyebrow programme-status">Student vision sheet</span>
         </article>
         <article class="programme-row">
           <span class="eyebrow programme-date">21 and 22 Nov</span>
-          <h3>Grand Alumni Meet</h3>
+          <h3><a class="programme-link" href="/alumni-meet/" target="_blank" rel="noopener">Grand Alumni Meet <span class="arrow" aria-hidden="true">↗</span></a></h3>
           <p>Two days at IIT Bombay for reunions, conversations and the next chapter.</p>
           <span class="eyebrow programme-status">Save the date</span>
         </article>
@@ -649,7 +654,7 @@
   <section class="section" id="alumni-meet" aria-labelledby="alumni-title">
     <div class="shell alumni-layout">
       <figure class="alumni-photo reveal">
-        <img src="assets/ieor-building.jpg" width="1250" height="1270" alt="The IEOR building at IIT Bombay, framed by trees">
+        <img src="assets/building/fifty-banner.jpg" width="1800" height="1350" alt="The Fifty Years banner hanging on the IEOR building">
         <figcaption>IEOR · IIT Bombay · Powai</figcaption>
       </figure>
       <div class="alumni-copy reveal">
@@ -657,35 +662,26 @@
         <h2 class="display" id="alumni-title">Welcome back<br>to Powai.</h2>
         <div class="alumni-date">
           <strong>21 and 22</strong>
-          <span>November 2026<br>Save the date</span>
+          <span>November 2026<br>Registration open</span>
         </div>
-        <p class="body-copy">Welcome back to the department. Registration is not open yet; leave your email and batch year to receive the official programme and registration announcement when they are ready.</p>
-        <a class="button button--quiet" href="#invite">Join the updates list</a>
+        <p class="body-copy">Welcome back to the department. Registration for the Grand Alumni Meet is now open through the official IIT Bombay event pages.</p>
+        <a class="button button--quiet" href="#register">Register for the Alumni Meet <span class="arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
 
-  <section class="section invite" id="invite" aria-labelledby="invite-title">
-    <div class="shell invite-layout">
-      <div class="invite-copy reveal">
-        <p class="eyebrow">Stay in the record</p>
-        <h2 class="display" id="invite-title">Hear it<br>from IEOR.</h2>
-        <p>This is the Jubilee updates list, not event registration. We will write when the official programme and registration open.</p>
+  <section class="section register" id="register" aria-labelledby="register-title">
+    <div class="shell register-layout">
+      <div class="register-copy reveal">
+        <p class="eyebrow">Grand Alumni Meet · 21 and 22 November 2026</p>
+        <h2 class="display" id="register-title">Register<br>for Powai.</h2>
+        <p>Choose the registration page for your location. Both links open the official IIT Bombay event platform.</p>
       </div>
-
-      <form class="invite-form reveal" id="capForm" novalidate>
-        <div class="field">
-          <label for="capEmail">Email address</label>
-          <input id="capEmail" type="email" name="email" autocomplete="email" inputmode="email" required aria-describedby="privacy-note">
-        </div>
-        <div class="field">
-          <label for="capBatch">Batch year <span aria-hidden="true">·</span> optional</label>
-          <input id="capBatch" type="text" name="batch" inputmode="numeric" maxlength="4" autocomplete="off" placeholder="1994">
-        </div>
-        <p class="invite-note" id="privacy-note">Your batch year helps us reach every decade. These details are collected only for Golden Jubilee communication.</p>
-        <button class="button" type="submit" id="capBtn">Join the updates list <span class="arrow" aria-hidden="true">→</span></button>
-        <div class="form-message" id="capMsg" role="status" aria-live="polite"></div>
-      </form>
+      <div class="register-links reveal">
+        <a class="register-link" href="https://www.iitbombay.org/e/ieor-alumni-meet-2026" target="_blank" rel="noopener"><span><span class="eyebrow">For alumni in India</span><strong>Indian Registration</strong></span><span class="arrow" aria-hidden="true">↗</span></a>
+        <a class="register-link" href="https://www.iitbombay.org/e/ieor-alumni-meet-2026-usd/" target="_blank" rel="noopener"><span><span class="eyebrow">For international registration</span><strong>International Registration</strong></span><span class="arrow" aria-hidden="true">↗</span></a>
+        <a class="register-events" href="https://www.iitbombay.org/events/?tag=reunions" target="_blank" rel="noopener">See all reunion events <span class="arrow" aria-hidden="true">↗</span></a>
+      </div>
     </div>
   </section>
 </main>
@@ -695,10 +691,11 @@
     <div class="footer-top">
       <p class="footer-title">Department of Industrial Engineering and Operations Research, IIT Bombay</p>
       <div class="footer-links">
+        <a href="/golden-reveal/">Golden Reveal</a>
         <a href="#programme">Programme</a>
         <a href="#alumni-meet">Alumni Meet</a>
         <a href="https://www.ieor.iitb.ac.in/next-fifty/">The Next Fifty</a>
-        <a href="#privacy-note">Privacy</a>
+        <a href="https://www.iitbombay.org/events/?tag=reunions" target="_blank" rel="noopener">Reunion events</a>
         <a href="mailto:24b4530@iitb.ac.in">Jubilee enquiries</a>
       </div>
     </div>
@@ -709,8 +706,34 @@
   </div>
 </footer>
 
+<script src="assets/gsap.min.js"></script>
 <script>
   console.log('IEOR Golden Jubilee v0.5.2');
+
+  const heroTitle = document.getElementById('hero-title');
+  const motionOk = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (heroTitle && motionOk && window.gsap) {
+    const splitHero = () => {
+      heroTitle.querySelectorAll('.line').forEach((line) => {
+        const text = line.textContent;
+        line.textContent = '';
+        text.trim().split(/\s+/).forEach((word, index, words) => {
+          const span = document.createElement('span');
+          span.className = 'split-char';
+          span.textContent = word;
+          line.appendChild(span);
+          if (index < words.length - 1) line.appendChild(document.createTextNode(' '));
+        });
+      });
+      gsap.fromTo(
+        heroTitle.querySelectorAll('.split-char'),
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', stagger: 0.05 },
+      );
+    };
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(splitHero);
+    else splitHero();
+  }
 
   const menuButton = document.querySelector('.menu-toggle');
   const navLinks = document.getElementById('navLinks');
@@ -779,53 +802,7 @@
     revealElements.forEach((element) => observer.observe(element));
   }
 
-  const form = document.getElementById('capForm');
-  const button = document.getElementById('capBtn');
-  const message = document.getElementById('capMsg');
 
-  form.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const email = form.email.value.trim();
-    const batch = form.batch.value.trim();
-    message.className = 'form-message';
-
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      message.className = 'form-message error';
-      message.textContent = 'That email does not look right. Please check it.';
-      form.email.focus();
-      return;
-    }
-
-    if (batch && !/^(19|20)\d{2}$/.test(batch)) {
-      message.className = 'form-message error';
-      message.textContent = 'Batch year should be four digits, like 1994.';
-      form.batch.focus();
-      return;
-    }
-
-    button.disabled = true;
-    const original = button.innerHTML;
-    button.textContent = 'Sending';
-
-    try {
-      const response = await fetch('api/subscribe.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, batch })
-      });
-      const data = await response.json().catch(() => ({}));
-      if (!response.ok) throw new Error(data.error || 'We could not save that just now.');
-
-      form.reset();
-      message.textContent = 'You are on the list. We will write when the next announcement is ready.';
-    } catch (error) {
-      message.className = 'form-message error';
-      message.textContent = `${error.message} You can also email 24b4530@iitb.ac.in.`;
-    } finally {
-      button.disabled = false;
-      button.innerHTML = original;
-    }
-  });
 
 </script>
 </body>
