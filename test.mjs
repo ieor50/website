@@ -7,7 +7,7 @@ await access(new URL('./assets/golden-jubilee-logo.png', import.meta.url));
 await access(new URL('./assets/ieor-building.jpg', import.meta.url));
 await access(new URL('./alumni-meet/index.html', import.meta.url));
 
-assert.match(html, /<link rel="canonical" href="https:\/\/ieor50\.github\.io\/website\/">/);
+assert.match(html, /<link rel="canonical" href="https:\/\/ieor\.iitb\.ac\.in\/golden-jubilee\/">/);
 assert.doesNotMatch(html, /ieor-golden-jubilee\.vercel\.app/);
 assert.match(html, /id="jubilee-title">What the Jubilee is for\.<\/h2>/);
 assert.match(html, /<dt>2076<\/dt><dd>A century of IEOR<\/dd>/);
