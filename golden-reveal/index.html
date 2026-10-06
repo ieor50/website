@@ -22,11 +22,14 @@
 <meta name="twitter:image" content="https://ieor.iitb.ac.in/golden-jubilee/assets/golden-reveal/at-the-mark.jpg">
 <meta name="twitter:image:alt" content="IEOR community at the Golden Jubilee mark unveiling">
 <link rel="canonical" href="https://ieor.iitb.ac.in/golden-jubilee/golden-reveal/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%2314140f'/><text x='50' y='67' text-anchor='middle' font-family='Georgia' font-size='58' fill='%23daa614'>50</text></svg>">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#faf6ec">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
 <style>
-  :root { --paper:#faf6ec; --paper-deep:#efe7d5; --ink:#14140f; --muted:#6e685a; --gold:#9a7b2f; --line:rgba(20,20,15,.18); --serif:"Newsreader", Georgia, serif; --sans:"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; --mono:"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; --page:min(92vw,1200px); }
+  :root { --paper:#faf6ec; --paper-deep:#efe7d5; --ink:#14140f; --muted:#6e685a; --gold:#9a7b2f; --line:rgba(20,20,15,.18); --serif:"Newsreader", Georgia, serif; --sans:"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; --page:min(92vw,1200px); }
   * { box-sizing:border-box; }
   html { scroll-behavior:smooth; }
   body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); line-height:1.6; }
@@ -37,7 +40,7 @@
   .nav { min-height:78px; display:flex; align-items:center; justify-content:space-between; gap:28px; }
   .brand { display:flex; align-items:center; gap:12px; text-decoration:none; }
   .brand-logo { width:48px; height:48px; object-fit:contain; }
-  .brand-name, .eyebrow, .back-link { font-family:var(--mono); font-size:.72rem; letter-spacing:.04em; }
+  .brand-name, .eyebrow, .back-link { font-family:var(--sans); font-size:.72rem; letter-spacing:.04em; }
   .back-link { text-underline-offset:5px; }
   main { padding:clamp(56px,8vw,110px) 0 96px; }
   .hero { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(240px,.7fr); gap:clamp(36px,7vw,96px); align-items:end; padding-bottom:48px; }
@@ -48,7 +51,7 @@
   .facts strong { font-family:var(--serif); font-size:1.55rem; font-weight:500; letter-spacing:0; }
   .hero-photo { margin:0; }
   .hero-photo img { aspect-ratio:6/5; object-fit:cover; }
-  figcaption { margin-top:10px; color:var(--muted); font-family:var(--mono); font-size:.72rem; letter-spacing:.03em; }
+  figcaption { margin-top:10px; color:var(--muted); font-family:var(--sans); font-size:.72rem; letter-spacing:.03em; }
   .chapter { padding-top:88px; }
   .chapter-head { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1fr); gap:32px; align-items:end; margin-bottom:28px; }
   h2 { font-size:clamp(2.8rem,5vw,5.2rem); max-width:10ch; }
@@ -56,27 +59,32 @@
   .frame { margin:0 0 22px; }
   .pair { display:grid; grid-template-columns:1.15fr .85fr; gap:22px; align-items:start; }
   .pair .frame img { aspect-ratio:4/3; object-fit:cover; object-position:center; }
-  .tall img { aspect-ratio:3/4; object-fit:cover; object-position:center 30%; }
+  .pair .tall img { aspect-ratio:3/4; object-fit:cover; object-position:center 30%; }
   .wide img { aspect-ratio:16/10; object-fit:cover; }
   .next { margin-top:88px; padding:36px 0; border-block:1px solid var(--line); display:flex; align-items:center; justify-content:space-between; gap:28px; }
   .next p { margin:0; max-width:46ch; color:var(--muted); }
-  .button { display:inline-flex; align-items:center; min-height:48px; padding:12px 18px; border:1px solid var(--ink); background:var(--ink); color:var(--paper); font-family:var(--mono); font-size:.72rem; text-decoration:none; }
+  .button { display:inline-flex; align-items:center; min-height:48px; padding:12px 18px; border:1px solid var(--ink); background:var(--ink); color:var(--paper); font-family:var(--sans); font-size:.72rem; text-decoration:none; }
   .button:hover { background:var(--gold); border-color:var(--gold); color:var(--ink); }
   @media (max-width:760px) {
     .hero, .chapter-head, .pair, .next { grid-template-columns:1fr; }
     .next { align-items:flex-start; flex-direction:column; }
-    .hero-photo img, .pair .frame img, .tall img { aspect-ratio:auto; object-fit:contain; }
+    .hero-photo img, .pair .frame img, .pair .tall img { aspect-ratio:auto; object-fit:contain; }
   }
+  .skip-link { position:fixed; top:10px; left:10px; z-index:100; padding:10px 14px; background:var(--ink); color:var(--paper); transform:translateY(-150%); }
+  .skip-link:focus { transform:translateY(0); }
+  a:focus-visible { outline:2px solid var(--gold-bright, #daa614); outline-offset:4px; }
+  html { touch-action:manipulation; }
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header class="site-header">
   <nav class="nav shell" aria-label="Page navigation">
-    <a class="brand" href="../"><img class="brand-logo" src="../assets/golden-jubilee-logo.png" alt=""><span class="brand-name">IEOR · IIT Bombay</span></a>
+    <a class="brand" href="../"><img class="brand-logo" src="../assets/golden-jubilee-logo.webp" width="192" height="192" alt=""><span class="brand-name">IEOR · IIT Bombay</span></a>
     <a class="back-link" href="../">Back to Golden Jubilee</a>
   </nav>
 </header>
-<main class="shell">
+<main class="shell" id="main">
   <section class="hero" aria-labelledby="page-title">
     <div>
       <p class="eyebrow">IEOR Golden Jubilee · 3 September 2026</p>
@@ -89,7 +97,7 @@
       </div>
     </div>
     <figure class="hero-photo">
-      <img src="../assets/golden-reveal/mark-unveiled.jpg" width="1800" height="1513" alt="The Golden Jubilee mark on a table outside the IEOR building, beside a faculty member with a microphone">
+      <img src="../assets/golden-reveal/mark-unveiled.webp" fetchpriority="high" width="1800" height="1513" alt="The Golden Jubilee mark on a table outside the IEOR building, beside a faculty member with a microphone">
       <figcaption>Outside the department</figcaption>
     </figure>
   </section>
@@ -100,21 +108,21 @@
       <p>Fifty years, set in gold and black: IEOR, IIT Bombay, 1976 to 2026. It stood on the red carpet first, then stayed for photographs against the department wall.</p>
     </div>
     <div class="pair">
-      <figure class="frame">
-        <img src="../assets/golden-reveal/red-carpet.jpg" width="1350" height="1800" alt="Faculty and students gathered on a red carpet around the Golden Jubilee mark">
+      <figure class="frame tall">
+        <img src="../assets/golden-reveal/red-carpet.webp" loading="lazy" width="1350" height="1800" alt="Faculty and students gathered on a red carpet around the Golden Jubilee mark">
         <figcaption>The unveiling</figcaption>
       </figure>
-      <figure class="frame tall">
-        <img src="../assets/golden-reveal/at-the-mark.jpg" width="1800" height="1350" alt="Two faculty members beside the Golden Jubilee mark under a tree">
+      <figure class="frame">
+        <img src="../assets/golden-reveal/at-the-mark.webp" loading="lazy" width="1800" height="1350" alt="Two faculty members beside the Golden Jubilee mark under a tree">
         <figcaption>At the table</figcaption>
       </figure>
     </div>
     <figure class="frame wide">
-      <img src="../assets/golden-reveal/outside-crowd.jpg" width="1800" height="1350" alt="A crowd gathered along the path beside the IEOR building">
+      <img src="../assets/golden-reveal/outside-crowd.webp" loading="lazy" width="1800" height="1350" alt="A crowd gathered along the path beside the IEOR building">
       <figcaption>The department steps</figcaption>
     </figure>
     <figure class="frame wide">
-      <img src="../assets/golden-reveal/with-the-mark.jpg" width="1800" height="1350" alt="Two students seated indoors with the Golden Jubilee mark between them">
+      <img src="../assets/golden-reveal/with-the-mark.webp" loading="lazy" width="1800" height="1350" alt="Two students seated indoors with the Golden Jubilee mark between them">
       <figcaption>With the mark</figcaption>
     </figure>
   </section>
@@ -125,16 +133,16 @@
       <p>The lecture hall was full. The mark was on both screens. A small model of the building sat on the front desk, and the rows ran back to the doors.</p>
     </div>
     <figure class="frame wide">
-      <img src="../assets/golden-reveal/hall.jpg" width="1800" height="1350" alt="A full lecture hall seen from the back, with the Golden Jubilee mark on two screens">
+      <img src="../assets/golden-reveal/hall.webp" loading="lazy" width="1800" height="1350" alt="A full lecture hall seen from the back, with the Golden Jubilee mark on two screens">
       <figcaption>From the back of the hall</figcaption>
     </figure>
     <div class="pair">
       <figure class="frame">
-        <img src="../assets/golden-reveal/hall-standing.jpg" width="1800" height="1350" alt="Students standing along the back of a blue lecture hall, with faculty seated in front">
+        <img src="../assets/golden-reveal/hall-standing.webp" loading="lazy" width="1800" height="1350" alt="Students standing along the back of a blue lecture hall, with faculty seated in front">
         <figcaption>Standing room</figcaption>
       </figure>
       <figure class="frame">
-        <img src="../assets/golden-reveal/faculty.jpg" width="1800" height="1350" alt="Faculty seated along the front table of the lecture hall">
+        <img src="../assets/golden-reveal/faculty.webp" loading="lazy" width="1800" height="1350" alt="Faculty seated along the front table of the lecture hall">
         <figcaption>The front table</figcaption>
       </figure>
     </div>
@@ -146,17 +154,17 @@
       <p>Fifty years of legacy, held out by a line of people, then hung on the blue wall of the department.</p>
     </div>
     <div class="pair">
-      <figure class="frame">
-        <img src="../assets/golden-reveal/banner-held.jpg" width="1350" height="1800" alt="Students and faculty holding a long purple Golden Jubilee banner">
+      <figure class="frame tall">
+        <img src="../assets/golden-reveal/banner-held.webp" loading="lazy" width="1350" height="1800" alt="Students and faculty holding a long purple Golden Jubilee banner">
         <figcaption>Held out</figcaption>
       </figure>
       <figure class="frame tall">
-        <img src="../assets/golden-reveal/banner-hung.jpg" width="1012" height="1800" alt="The purple Golden Jubilee banner hanging on the IEOR building">
+        <img src="../assets/golden-reveal/banner-hung.webp" loading="lazy" width="1012" height="1800" alt="The purple Golden Jubilee banner hanging on the IEOR building">
         <figcaption>On the wall</figcaption>
       </figure>
     </div>
     <figure class="frame wide">
-      <img src="../assets/building/facade.jpg" width="1800" height="1350" alt="The IEOR building facade, photographed after the Golden Reveal">
+      <img src="../assets/building/facade.webp" loading="lazy" width="1800" height="1350" alt="The IEOR building facade, photographed after the Golden Reveal">
       <figcaption>The building, after</figcaption>
     </figure>
   </section>

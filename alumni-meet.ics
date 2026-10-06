@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//IEOR IIT Bombay//Golden Jubilee//EN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ieor-golden-jubilee-alumni-meet-2026@ieor.iitb.ac.in
+DTSTAMP:20261006T000000Z
+DTSTART:20261121T033000Z
+DTEND:20261122T090000Z
+SUMMARY:IEOR Golden Jubilee Grand Alumni Meet
+LOCATION:IIT Bombay\, Powai\, Mumbai 400076
+DESCRIPTION:Schedule: https://ieor.iitb.ac.in/golden-jubilee/alumni-meet/
+URL:https://ieor.iitb.ac.in/golden-jubilee/alumni-meet/
+END:VEVENT
+END:VCALENDAR
